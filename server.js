@@ -19,12 +19,12 @@ app.set("view engine", "ejs");
 app.get("/yourStory/:you", function(req, res) {
   // Use res.render to "pass in values" that the HTML document will be able to render
   // into the template (see below)
+  let name = req.params.you;
   res.render("index", {
     name: "Rumplestilskin",
     title: "Playing with express",
-    copyRightName: "Austin Loveless"
+    copyRightName: name
   });
-  res.send(req.parmas.you);
 });
 
 app.post("/posts/:user", (req, res) => {
