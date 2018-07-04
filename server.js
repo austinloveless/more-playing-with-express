@@ -21,7 +21,7 @@ app.get("/yourStory/:you", function(req, res) {
   // into the template (see below)
   let name = req.params.you;
   res.render("index", {
-    name: "Rumplestilskin",
+    name: name,
     title: "Playing with express",
     copyRightName: name
   });
